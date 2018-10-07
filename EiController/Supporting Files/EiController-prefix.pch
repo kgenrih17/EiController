@@ -1,0 +1,28 @@
+//
+//  EiController-prefix.pch
+//  EiController
+//
+//  Created by admin on 2/12/16.
+//  Copyright © 2016 RadicalComputing. All rights reserved.
+//
+
+#ifndef EiController_prefix_pch
+#define EiController_prefix_pch
+
+#import <EvogenceLib/EvogenceLib.h>
+#import "BlockOperationDelay.h"
+#import "EiControllerSysInfo.h"
+#import "NSObject+PropertyName.h"
+#import "NSDictionary+RPC.h"
+#import "RequestResult+RPC.h"
+#import "NSString+NewAdditions.h"
+#import "UIView+Corners.h"
+#import "UIViewController+Navigation.h"
+#import "ErrorDescription.h"
+#import "Folders.h"
+#import "Helper.h"
+#import "Switch.h"
+#import "CommandResult.h"
+#import "Device.h"
+
+#endif

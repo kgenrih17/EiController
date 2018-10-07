@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EthernetSettingsView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="390"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TNN-IG-LmM" customClass="TPKeyboardAvoidingScrollView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="390"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r9r-Ab-UsY">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="390"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Thm-BE-oX4" userLabel="staticSettingsView">
+                                    <rect key="frame" x="0.0" y="37.5" width="320" height="280"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="280" id="8Mu-Vr-Gv3"/>
+                                    </constraints>
+                                </view>
+                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="auy-nZ-mcl">
+                                    <rect key="frame" x="263" y="6.5" width="51" height="31"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="31" id="KCI-wm-UXd"/>
+                                        <constraint firstAttribute="width" constant="49" id="NBN-qb-eeL"/>
+                                    </constraints>
+                                    <color key="onTintColor" red="0.0" green="0.54901960780000003" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="thumbTintColor" red="0.0" green="0.77647058820000003" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="switchDHCP:" destination="iN0-l3-epB" eventType="touchUpInside" id="Lui-hc-cbm"/>
+                                    </connections>
+                                </switch>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IP DHCP" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdS-8f-0AT">
+                                    <rect key="frame" x="0.0" y="8" width="96" height="24"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="24" id="5ql-fE-qGg"/>
+                                        <constraint firstAttribute="width" constant="96" id="MPf-5R-7yT"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="tdS-8f-0AT" firstAttribute="leading" secondItem="r9r-Ab-UsY" secondAttribute="leading" id="0Yu-fO-LZL"/>
+                                <constraint firstItem="tdS-8f-0AT" firstAttribute="top" secondItem="r9r-Ab-UsY" secondAttribute="top" constant="8" id="6co-aD-sN3"/>
+                                <constraint firstItem="Thm-BE-oX4" firstAttribute="width" secondItem="r9r-Ab-UsY" secondAttribute="width" id="Fzj-GK-Q8Z"/>
+                                <constraint firstItem="Thm-BE-oX4" firstAttribute="top" secondItem="auy-nZ-mcl" secondAttribute="bottom" id="Gth-Sm-VKH"/>
+                                <constraint firstItem="auy-nZ-mcl" firstAttribute="centerY" secondItem="tdS-8f-0AT" secondAttribute="centerY" constant="2" id="HPa-LC-JRv"/>
+                                <constraint firstAttribute="trailing" secondItem="auy-nZ-mcl" secondAttribute="trailing" constant="8" id="KzQ-z4-WH9"/>
+                                <constraint firstAttribute="trailing" secondItem="Thm-BE-oX4" secondAttribute="trailing" id="S9B-5J-U7L"/>
+                                <constraint firstItem="Thm-BE-oX4" firstAttribute="leading" secondItem="r9r-Ab-UsY" secondAttribute="leading" id="Vd4-64-HkQ"/>
+                            </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="jtN-V3-RE1" appends="YES" id="98k-Qu-Wem"/>
+                            </connections>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="r9r-Ab-UsY" secondAttribute="trailing" id="1re-7o-1fr"/>
+                        <constraint firstAttribute="bottom" secondItem="r9r-Ab-UsY" secondAttribute="bottom" id="PSM-hA-A3q"/>
+                        <constraint firstItem="r9r-Ab-UsY" firstAttribute="leading" secondItem="TNN-IG-LmM" secondAttribute="leading" id="SBE-r4-XJY"/>
+                        <constraint firstItem="r9r-Ab-UsY" firstAttribute="top" secondItem="TNN-IG-LmM" secondAttribute="top" id="iqX-vE-o85"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="r9r-Ab-UsY" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="CCW-kt-861"/>
+                <constraint firstItem="TNN-IG-LmM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Dc3-HA-FIX"/>
+                <constraint firstItem="r9r-Ab-UsY" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="Jt2-Qz-T6n"/>
+                <constraint firstItem="TNN-IG-LmM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="v6n-OA-eOp"/>
+                <constraint firstAttribute="bottom" secondItem="TNN-IG-LmM" secondAttribute="bottom" id="xAZ-qB-y6E"/>
+                <constraint firstAttribute="trailing" secondItem="TNN-IG-LmM" secondAttribute="trailing" id="ydU-uz-H7M"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="ipdhcpSwt" destination="auy-nZ-mcl" id="y9i-so-qpg"/>
+                <outlet property="staticSettingsView" destination="Thm-BE-oX4" id="Yik-eT-Zkk"/>
+            </connections>
+            <point key="canvasLocation" x="802" y="333"/>
+        </view>
+        <tapGestureRecognizer id="jtN-V3-RE1">
+            <connections>
+                <action selector="hideKeyboard" destination="iN0-l3-epB" id="j4D-f5-tYM"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>
